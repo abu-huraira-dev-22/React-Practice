@@ -3,6 +3,7 @@ import Counter from './Practice/Counter'
 import ToggleMessage from './Practice/ToggleMessage'
 import UserInput from './Practice/UserInput'
 import Form from './Practice/Form'
+import Array from './Practice/Array'
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
       {/* <Counter/> */}
       {/* <ToggleMessage/> */}
       {/* <UserInput/> */}
-    <Form/>
+    {/* <Form/> */}
+    <Array/>
     </div>
   )
 }
