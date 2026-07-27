@@ -4,6 +4,7 @@ import ToggleMessage from './Practice/ToggleMessage'
 import UserInput from './Practice/UserInput'
 import Form from './Practice/Form'
 import Array from './Practice/Array'
+import Todo from './Practice/Todo'
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       {/* <ToggleMessage/> */}
       {/* <UserInput/> */}
     {/* <Form/> */}
-    <Array/>
+    {/* <Array/> */}
+    <Todo/>
     </div>
   )
 }
