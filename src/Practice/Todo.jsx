@@ -4,12 +4,15 @@ const Todo = () => {
     const [todos, setTodos] = useState([])
     const [newTask, setNewTask] = useState('')
     const listTask = todos.map((todo,id)=>{
-        return <li key={todo.id}>{todo.text}<button onClick={()=>{
-            
-        }}>Delete</button></li>
+        return <li key={todo.id}>{todo.text}<button onClick={()=>deleteTask(todo.id)}>Delete</button></li>
         
     })
-
+const deleteTask=(id)=>{
+const updateTodos = todos.filter((todo)=>{
+return todo.id !== id
+})
+setTodos(updateTodos)
+}
     const addTask = ()=>{
         const newTodo= {
             id: Date.now(),
