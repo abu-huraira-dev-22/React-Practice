@@ -5,6 +5,7 @@ import UserInput from './Practice/UserInput'
 import Form from './Practice/Form'
 import Array from './Practice/Array'
 import Todo from './Practice/Todo'
+import TodoApp from './Practice/TodoApp'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       {/* <UserInput/> */}
     {/* <Form/> */}
     {/* <Array/> */}
-    <Todo/>
+    {/* <Todo/> */}
+    <TodoApp/>
     </div>
   )
 }
