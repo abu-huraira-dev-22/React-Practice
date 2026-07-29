@@ -6,6 +6,7 @@ import Form from './Practice/Form'
 import Array from './Practice/Array'
 import Todo from './Practice/Todo'
 import TodoApp from './Practice/TodoApp'
+import Quiz from './Practice/Quiz'
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
     {/* <Form/> */}
     {/* <Array/> */}
     {/* <Todo/> */}
-    <TodoApp/>
+    {/* <TodoApp/> */}
+    <Quiz/>
     </div>
   )
 }
