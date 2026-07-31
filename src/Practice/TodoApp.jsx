@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
+import { Link } from "react-router-dom";
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
@@ -54,6 +55,12 @@ const TodoApp = () => {
 
 return (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black flex items-center justify-center p-5">
+      <Link 
+    to="/" 
+    className="absolute bottom-5 left-5 flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white/10 backdrop-blur text-sm text-slate-300 hover:bg-white/20 transition"
+  >
+    ← Home
+  </Link>
     <div className="w-full max-w-xl bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-6">
       <h1 className="text-3xl font-bold text-center text-white mb-6">
         📝 Todo App

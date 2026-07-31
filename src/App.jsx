@@ -8,10 +8,19 @@ import Todo from './Practice/Todo'
 import TodoApp from './Practice/TodoApp'
 import Quiz from './Practice/Quiz'
 import ExpenseTracker from './Practice/ExpenseTracker'
+import Home from './Practice/Home'
+import { Link, Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
     <div>
+
+      <Routes>
+        <Route path = '/' element = {<Home/>}  />
+        <Route path = '/todo' element = {<TodoApp/>}  />
+        <Route path = '/quiz' element = {<Quiz/>} />
+        <Route path = '/expense' element = {<ExpenseTracker/>} />
+      </Routes>
       {/* <Counter/> */}
       {/* <ToggleMessage/> */}
       {/* <UserInput/> */}
@@ -20,7 +29,8 @@ const App = () => {
     {/* <Todo/> */}
     {/* <TodoApp/> */}
     {/* <Quiz/> */}
-    <ExpenseTracker/>
+    {/* <ExpenseTracker/> */}
+    {/* <Home/> */}
     </div>
   )
 }

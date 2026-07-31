@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -111,6 +112,12 @@ const Quiz = () => {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-slate-950 bg-[radial-gradient(circle_at_15%_20%,rgba(255,176,59,0.08),transparent_40%),radial-gradient(circle_at_85%_80%,rgba(86,182,194,0.08),transparent_40%)] p-4 font-mono">
+        <Link 
+    to="/" 
+    className="absolute bottom-5 left-5 flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white/10 backdrop-blur text-sm text-slate-300 hover:bg-white/20 transition"
+  >
+    ← Home
+  </Link>
       <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl">
         {showResult ? (
           // ---------- RESULT SCREEN ----------
