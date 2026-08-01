@@ -1,20 +1,12 @@
 import React, { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import { Link } from "react-router-dom";
+import { useLocalStorage } from "./customHook";
 
 const TodoApp = () => {
-  const [todos, setTodos] = useState([]);
   const [newTask, setNewTask] = useState("");
 
-  useEffect(() => {
-    const savedTodos = localStorage.getItem("todos");
-    if (savedTodos) {
-      setTodos(JSON.parse(savedTodos));
-    }
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+  const [todos, setTodos] = useLocalStorage('todos',[])
 
   const deleteTask = (id) => {
     const updateTodos = todos.filter((todo) => {
