@@ -10,17 +10,18 @@ import Quiz from './Practice/Quiz'
 import ExpenseTracker from './Practice/ExpenseTracker'
 import Home from './Practice/Home'
 import { Link, Route, Routes } from 'react-router-dom'
+import HabitTracker from './Practice/HabitTracker'
 
 const App = () => {
   return (
     <div>
 
-      <Routes>
+      {/* <Routes>
         <Route path = '/' element = {<Home/>}  />
         <Route path = '/todo' element = {<TodoApp/>}  />
         <Route path = '/quiz' element = {<Quiz/>} />
         <Route path = '/expense' element = {<ExpenseTracker/>} />
-      </Routes>
+      </Routes> */}
       {/* <Counter/> */}
       {/* <ToggleMessage/> */}
       {/* <UserInput/> */}
@@ -31,6 +32,7 @@ const App = () => {
     {/* <Quiz/> */}
     {/* <ExpenseTracker/> */}
     {/* <Home/> */}
+    <HabitTracker/>
     </div>
   )
 }
