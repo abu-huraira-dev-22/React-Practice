@@ -11,6 +11,8 @@ import ExpenseTracker from './Practice/ExpenseTracker'
 import Home from './Practice/Home'
 import { Link, Route, Routes } from 'react-router-dom'
 import HabitTracker from './Practice/HabitTracker'
+import Navbar from './Practice/UserContext'
+import Profile from './Practice/Profile'
 
 const App = () => {
   return (
@@ -32,7 +34,9 @@ const App = () => {
     {/* <Quiz/> */}
     {/* <ExpenseTracker/> */}
     {/* <Home/> */}
-    <HabitTracker/>
+    {/* <HabitTracker/> */}
+    {/* <Navbar/> */}
+    <Profile/>
     </div>
   )
 }
