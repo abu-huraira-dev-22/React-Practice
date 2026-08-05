@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from './Practice/Counter'
+// import Counter from './Practice/Counter'
 import ToggleMessage from './Practice/ToggleMessage'
 import UserInput from './Practice/UserInput'
 import Form from './Practice/Form'
@@ -13,6 +13,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import HabitTracker from './Practice/HabitTracker'
 import Navbar from './Practice/UserContext'
 import Profile from './Practice/Profile'
+import CounterReducer from './Practice/CounterReducer'
 
 const App = () => {
   return (
@@ -36,7 +37,8 @@ const App = () => {
     {/* <Home/> */}
     {/* <HabitTracker/> */}
     {/* <Navbar/> */}
-    <Profile/>
+    {/* <Profile/> */}
+    <CounterReducer/>
     </div>
   )
 }

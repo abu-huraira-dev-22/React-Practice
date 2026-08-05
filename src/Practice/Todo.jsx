@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import ThemeContext from "./ThemeContext";
+import { useTheme } from "./useTheme";
 
 const Todo = () => {
+  const { theme, toggleTheme } = useTheme();
+
+
   const [todos, setTodos] = useState([]);
   const [newTask, setNewTask] = useState("");
   const listTask = todos.map((todo, id) => {
@@ -39,7 +44,7 @@ const Todo = () => {
     const updateTask = todos.map((todo) => {
       return todo.id === id ? { ...todo, complete: !todo.complete } : todo;
     });
-    setTodos(updateTask)
+    setTodos(updateTask);
   };
 
   return (
@@ -51,6 +56,7 @@ const Todo = () => {
         placeholder="Add todo"
       />
       <button onClick={addTask}>Add Task</button>
+      <button onClick={toggleTheme}>{theme}</button>
       <ul>{listTask}</ul>
     </div>
   );

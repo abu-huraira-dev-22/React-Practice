@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocalStorage } from "./customHook";
 
 const HabitTracker = () => {
+  const inputRef = useRef(null)
   const [habits, setHabit] = useLocalStorage("habits", []);
   const [newHabit, setNewHabit] = useState("");
+
+  useEffect(()=>{
+    inputRef.current.focus()
+  },[])
 
   const addHabit = () => {
     if (newHabit.trim() === "") {
@@ -16,6 +21,7 @@ const HabitTracker = () => {
     };
     setHabit([...habits, newHabits]);
     setNewHabit("");
+    inputRef.current.focus()
   };
 
   const deleteHabit = (id) => {
@@ -38,7 +44,6 @@ const HabitTracker = () => {
       }
     });
     setHabit(updateHabit);
-    console.log("update");
   };
 
   const calculateStreak = (completedDates) => {
@@ -150,6 +155,7 @@ const HabitTracker = () => {
 
         <div className="mb-6 flex gap-2.5">
           <input
+          ref={inputRef}
             type="text"
             placeholder="Enter the habit"
             onChange={(e) => setNewHabit(e.target.value)}

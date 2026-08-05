@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TodoItem from "./TodoItem";
 import { Link } from "react-router-dom";
 import { useLocalStorage } from "./customHook";
 
 const TodoApp = () => {
+  const inputRef = useRef(null)
+  useEffect(() => {
+  inputRef.current.focus()
+  }, [])
+  
   const [newTask, setNewTask] = useState("");
 
   const [todos, setTodos] = useLocalStorage('todos',[])
@@ -60,7 +65,7 @@ return (
 
       
       <div className="flex gap-3 mb-6">
-        <input
+        <input ref={inputRef}
           className="flex-1 px-4 py-3 rounded-xl bg-gray-800 text-white border border-gray-600 outline-none focus:border-emerald-500 transition"
           type="text"
           placeholder="Enter a new task..."
